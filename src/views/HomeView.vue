@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    <h1>Vue Bienes Raíces</h1>
+    <h1 class="text-center">Vue Bienes Raíces</h1>
   </main>
 </template>
