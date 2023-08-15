@@ -1,5 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { storeToRefs } from 'pinia'
+import { useAuthStore } from './stores/auth'
+
+const auth = useAuthStore()
+
+// Extrar función del store de pinia solamente a la parte reactiva (ref, reactive, computed property), en este caso es a una función Computed.
+const { isAuth } = storeToRefs(auth)
 </script>
 
 <template>
@@ -21,16 +28,14 @@ import { RouterLink, RouterView } from 'vue-router'
       </template>
 
       <template v-slot:append>
-        <v-btn
-          :to="{name: 'home'}"
-        >
-          Inicio
-        </v-btn>
-        <v-btn
-          :to="{name: 'login'}"
-        >
-          Iniciar Sesión
-        </v-btn>
+        <div v-if="isAuth">
+          <v-btn :to="{name: 'admin-propiedades'}">Admin</v-btn>
+          <v-btn @click="auth.logout">Cerrar Sesión</v-btn>
+        </div>
+        <div v-else>
+          <v-btn :to="{name: 'home'}">Inicio</v-btn>
+          <v-btn :to="{name: 'login'}">Iniciar Sesión</v-btn>
+        </div>
       </template>
 
       </v-app-bar>
