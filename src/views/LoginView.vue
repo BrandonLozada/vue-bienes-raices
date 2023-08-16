@@ -28,7 +28,7 @@ const submit = handleSubmit((values) => {
             Iniciar Sesión
         </v-card-title>
         <v-card-subtitle
-            class="text-h6 text-center"
+            class="text-h6 text-center my-3"
         >
             Accede con tu cuenta a Bienes Raíces
         </v-card-subtitle>
