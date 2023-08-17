@@ -1,6 +1,5 @@
 <script setup>
 import usePropiedades from '@/composables/usePropiedades'
-import { params } from 'superagent/lib/utils';
 
 const { propiedadesCollection, propertyPrice } = usePropiedades()
 </script>
