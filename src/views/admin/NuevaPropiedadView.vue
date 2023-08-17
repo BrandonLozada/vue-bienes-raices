@@ -62,7 +62,7 @@ const submit = handleSubmit(async(values) => {
         class="mx-auto my-10"
     >
 
-    <v-card-title
+        <v-card-title
             class="text-center text-h4 font-weight-bold"
             tag="h3"
         >
@@ -87,7 +87,7 @@ const submit = handleSubmit(async(values) => {
 
         <v-file-input
             accept="image/jepg"
-            label="Imagen"
+            label="Fotografía"
             prepend-icon="mdi-camera"
             class="mb-5"
             v-model="imagen.value.value"

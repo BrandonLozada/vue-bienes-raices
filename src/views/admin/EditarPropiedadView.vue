@@ -68,15 +68,26 @@ const submit = handleSubmit(async(values) => {
 </script>
 
 <template>
-    <v-card max-width="800" flat class="mx-auto my-10">
-            <v-card-title class="mt-5">
-                <h1 class="text-h4 font-weight-bold">Editar Propiedad</h1>
-            </v-card-title>
-            <v-card-subtitle >
-                <p class="text-h5">Edita los detalles de la propiedad</p>
-            </v-card-subtitle>
+    <v-card
+        max-width="800"
+        flat
+        class="mx-auto my-10"
+    >
+        <v-card-title
+            class="text-center text-h4 font-weight-bold"
+            tag="h3"
+        >
+            Editar Propiedad
+        </v-card-title>
+        <v-card-subtitle
+            class="text-h6 text-center my-3"
+        >
+            Edita los detalles de la Propiedad
+        </v-card-subtitle>
 
-            <v-form class="mt-10">
+            <v-form
+                class="mt-10"
+            >
                 <v-text-field
                     v-model="titulo.value.value"
                     :error-messages="titulo.errorMessage.value"
