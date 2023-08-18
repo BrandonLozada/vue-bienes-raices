@@ -50,7 +50,7 @@ const { propiedadesCollection, deleteItem } = usePropiedades()
                         color="red-darken-3"
                         flat
                         class="ma-2"
-                        @click="deleteItem(propiedad.id)"
+                        @click="deleteItem(propiedad.id, propiedad.imagen)"
                     >
                         Eliminar
                     </v-btn>
